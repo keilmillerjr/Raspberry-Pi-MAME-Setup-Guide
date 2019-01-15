@@ -21,7 +21,7 @@ Use Etcher on Mac to write Raspbian Stretch Lite to SD card.
 Login Credentials
 
 * Username: Pi
-* Password: Raspbian
+* Password: raspberry
 
 Coping files over ssh. Option ```-r``` lets you copy foldewr and files recursively.
 
@@ -82,7 +82,7 @@ To exit a remote connection, run the ```exit``` command.
 
 #### Raspberry Pi Configuration
 
-You can also setup network and SSH directly from Raspberry Pi Configuration. It would be wise to 
+You can also setup network and SSH directly from Raspberry Pi Configuration.
 
 1. Boot raspbian lite and login.
 2. Launch Raspberry Pi Configuration.
