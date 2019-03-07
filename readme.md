@@ -334,3 +334,29 @@ As suggested under config settings part of the guide, be sure you used ```$ sudo
 ```
 
 You may replace the path to the attract binary with advmame (single rom instance?), or anything else you wish to have automatically loaded.
+
+## Bluetooth
+
+I am using an 8bitdo m30 controller. However, this should work similar for most other controllers.
+
+1. Enter bluetoothctl to open Bluetooth control.
+2. Put the remote into d-input mode by holding start + B until LED 1 blinks.
+3. Put the remote into pairable mode by holding the small pair button on the front of the remote for 2 seconds. LEDs will sequence.
+4. At the [bluetooth]# prompt enter the following commands:
+
+```
+[bluetooth]# discoverable on
+[bluetooth]# pairable on
+[bluetooth]# agent on
+[bluetooth]# default-agent
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller B8:27:EB:7B:89:3C Discovering: yes
+[NEW] Device E4:17:D8:87:09:7D 8BitDo M30 gamepad
+[bluetooth]# pair E4:17:D8:87:09:7D
+[bluetooth]# trust E4:17:D8:87:09:7D
+[bluetooth]# scan off
+[bluetooth]# paired-devices
+Device E4:17:D8:87:09:7D 8BitDo M30 gamepad
+[bluetooth]#quit
+```
